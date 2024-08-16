@@ -8,7 +8,7 @@
   <code><img src="tests/images/logo/Jenkins.svg" width="40" height="40"  alt="A-d-am" title="Jenkins"></code>
   <code><img src="tests/images/logo/Selenoid.svg" width="40" height="40"  alt="A-d-am" title="Selenoid"></code>
   <code><img src="tests/images/logo/Allure_new.png" width="40" height="40"  alt="A-d-am" title="Allure Report"></code>
-  <code><img src="images/logo/allure_testops.png" width="40" height="40"  alt="A-d-am" title="Allure TestOps"></code>
+  <code><img src="tests/images/logo/allure_testops.png" width="40" height="40"  alt="A-d-am" title="Allure TestOps"></code>
 </p>
 
 ## Покрываемый функционал
@@ -61,4 +61,4 @@ allure serve allure-results
 <img src="tests/images/screenshots/allure_report_example_api.png">
 
 ### В проекте реализована интеграция с Allure TestsOps
-<img src="images/screenshots/allure_test_ops.png">
+<img src="tests/images/screenshots/allure_test_ops.png">
