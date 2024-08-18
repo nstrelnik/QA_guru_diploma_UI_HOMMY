@@ -14,10 +14,24 @@ def test_add_product_to_cart():
         user_password='testtest@mail.ru'
     )
     product_name = "Ваза VERDA S"
-    authorization.open_browser().open_authorization_form().fill_username(user).fill_password(
-        user).click_login().assert_successful_authorization()
-    inventory.open_catalog().open_product_page(product_name).add_product_to_cart().assert_product_to_cart_successful()
-    cart.open_cart().delete_product_from_cart()
+
+    authorization.open_browser()
+    authorization.open_authorization_form()
+    (
+        authorization
+        .fill_username(user)
+        .fill_password(user)
+        .click_login()
+    )
+    authorization.assert_successful_authorization()
+
+    inventory.open_catalog()
+    inventory.open_product_page(product_name)
+    inventory.add_product_to_cart()
+    inventory.assert_product_to_cart_successful()
+
+    cart.open_cart()
+    cart.delete_product_from_cart()
 
 
 @allure.story('Добавление товара в Избранное пользователя')
@@ -27,15 +41,32 @@ def test_add_product_to_favorite():
         user_password='testtest@mail.ru'
     )
     product_name = "Ваза VERDA S"
-    authorization.open_browser().open_authorization_form().fill_username(user).fill_password(
-        user).click_login().assert_successful_authorization()
+
+    authorization.open_browser()
+    authorization.open_authorization_form()
+    (
+        authorization
+        .fill_username(user)
+        .fill_password(user)
+        .click_login()
+    )
+    authorization.assert_successful_authorization()
+
     inventory.open_catalog()
-    (favorite.open_page_product_for_favorite(product_name).add_product_to_favorites().open_page_favorite().
-     assert_product_to_favorites_successful(product_name).delete_product_from_favorite())
+
+    favorite.open_page_product_for_favorite(product_name)
+    favorite.add_product_to_favorites()
+    favorite.open_page_favorite()
+    favorite.assert_product_to_favorites_successful(product_name)
+    favorite.delete_product_from_favorite()
 
 
 @allure.story('Поиск товара в каталоге через строку поиска')
 def test_search():
     product_name = "Часы настольные STELE"
+
     authorization.open_browser()
-    search.open_search().search_query_enter(product_name).search_query_successful(product_name)
+
+    search.open_search()
+    search.search_query_enter(product_name)
+    search.search_query_successful(product_name)
