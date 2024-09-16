@@ -6,7 +6,7 @@ from pages.cart_page import cart
 
 @allure.story('Удаление товара из корзины')
 def test_delete_from_cart():
-    product_name = "Ваза VERDA S"
+    product_name = "Ваза Mikayla S"
 
     authorization.open_browser()
 

@@ -13,7 +13,7 @@ def test_add_product_to_cart():
         user_email='testtest@mail.ru',
         user_password='testtest@mail.ru'
     )
-    product_name = "Ваза VERDA S"
+    product_name = "Ваза Mikayla S"
 
     authorization.open_browser()
     authorization.open_authorization_form()
@@ -40,7 +40,7 @@ def test_add_product_to_favorite():
         user_email='testtest@mail.ru',
         user_password='testtest@mail.ru'
     )
-    product_name = "Ваза VERDA S"
+    product_name = "Ваза Mikayla S"
 
     authorization.open_browser()
     authorization.open_authorization_form()
